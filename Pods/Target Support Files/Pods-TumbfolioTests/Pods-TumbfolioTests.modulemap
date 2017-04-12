@@ -1,0 +1,6 @@
+framework module Pods_TumbfolioTests {
+  umbrella header "Pods-TumbfolioTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

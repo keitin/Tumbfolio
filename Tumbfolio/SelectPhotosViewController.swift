@@ -51,12 +51,18 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
         return cell
     }
     
+    // MARK: Collection View Delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCell
+        cell.tapCell()
+    }
+    
     // MARK: Collection View Delegate Flow Layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellSize = self.view.frame.size.width/3 - 1
         return CGSize(width: cellSize, height: cellSize)
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

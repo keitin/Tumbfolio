@@ -22,16 +22,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj8-mc-BY0">
+                        <rect key="frame" x="153" y="15" width="30" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="3N6-aA-wyX"/>
+                            <constraint firstAttribute="height" constant="30" id="sx6-2c-ZbJ"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="m1h-lq-hwf" secondAttribute="trailing" id="EDl-dL-kr4"/>
+                <constraint firstAttribute="trailing" secondItem="fj8-mc-BY0" secondAttribute="trailing" constant="15" id="H6z-2V-7yN"/>
                 <constraint firstItem="m1h-lq-hwf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JaC-Vf-3v3"/>
+                <constraint firstItem="fj8-mc-BY0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="PMf-Wp-h5i"/>
                 <constraint firstItem="m1h-lq-hwf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ulj-AT-ghf"/>
                 <constraint firstAttribute="bottom" secondItem="m1h-lq-hwf" secondAttribute="bottom" id="X8l-DM-QCj"/>
             </constraints>
             <size key="customSize" width="198" height="198"/>
             <connections>
+                <outlet property="checkView" destination="fj8-mc-BY0" id="JYb-hQ-WBf"/>
                 <outlet property="photoImageView" destination="m1h-lq-hwf" id="Z4E-IZ-q0u"/>
             </connections>
             <point key="canvasLocation" x="-26" y="47"/>

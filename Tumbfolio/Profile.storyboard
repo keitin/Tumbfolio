@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FRt-HZ-av1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="hUW-h6-d1h">
+            <objects>
+                <viewController id="0eR-hQ-TLU" customClass="ProfileViewController" customModule="Tumbfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LFg-k8-PgS"/>
+                        <viewControllerLayoutGuide type="bottom" id="dPJ-wy-1Qa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t18-Wg-7fd">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="9of-OW-Znd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pau-Bx-Yi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="135"/>
+        </scene>
+        <!--Profile Navigation Controller-->
+        <scene sceneID="k8w-hw-smT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FRt-HZ-av1" customClass="ProfileNavigationController" customModule="Tumbfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pG6-ls-K8W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0eR-hQ-TLU" kind="relationship" relationship="rootViewController" id="JOL-1G-1Lk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNa-UV-9WC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+</document>

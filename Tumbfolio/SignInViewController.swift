@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+final class SignInViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     
@@ -24,6 +24,10 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func tapStartButton(_ sender: UIButton) {
+        
+        let profileNC = ProfileNavigationController.makeInstance()
+        UIApplication.shared.keyWindow?.rootViewController = profileNC
+        
     }
     
     

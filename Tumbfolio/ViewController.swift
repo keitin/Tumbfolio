@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        /*
         let request = GetPostsWithUser(userDomain: "kinopontas")
         Session.send(request) { result in
             switch result {
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+        */
         
    
     }

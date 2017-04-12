@@ -11,6 +11,7 @@ import UIKit
 final class SelectPhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     var collectionView: UICollectionView!
+    var photos: [CandidatePhoto] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -21,6 +22,12 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for _ in 1...30 {
+            let photo = CandidatePhoto(selected: false)
+            photos.append(photo)
+        }
+        
+        
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 1.0
         layout.minimumLineSpacing = 1.0
@@ -43,19 +50,20 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
     
     // MARK: Collection View Data Source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        cell.fillWith(photo: photos[indexPath.row])
         return cell
     }
     
     // MARK: Collection View Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
         let cell = collectionView.cellForItem(at: indexPath) as! PhotoCell
-        cell.tapCell()
+        let photo = photos[indexPath.row]
+        cell.tapCell(photo: photo)
     }
     
     // MARK: Collection View Delegate Flow Layout

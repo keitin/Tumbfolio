@@ -12,7 +12,6 @@ class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var checkView: UIView!
     @IBOutlet weak var photoImageView: UIImageView!
-    var checked: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,13 +19,21 @@ class PhotoCell: UICollectionViewCell {
         checkView.backgroundColor = UIColor.clear
     }
     
-    func tapCell() {
-        if (checked) {
+    func fillWith(photo: CandidatePhoto) {
+        if (photo.selected) {
+            checkView.backgroundColor = UIColor.white
+        } else {
             checkView.backgroundColor = UIColor.clear
-            checked = false
+        }
+    }
+    
+    func tapCell(photo: CandidatePhoto) {
+        if (photo.selected) {
+            checkView.backgroundColor = UIColor.clear
+            photo.changeSelect()
         } else {
             checkView.backgroundColor = UIColor.white
-            checked = true
+            photo.changeSelect()
         }
     }
 

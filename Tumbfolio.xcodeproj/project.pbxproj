@@ -12,6 +12,7 @@
 		3259D7201E9E4FF200018D2A /* NewPortfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */; };
 		3259D7231E9E533700018D2A /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D7211E9E533700018D2A /* PhotoCell.swift */; };
 		3259D7241E9E533700018D2A /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3259D7221E9E533700018D2A /* PhotoCell.xib */; };
+		3259D7281E9E61B700018D2A /* CandidatePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D7271E9E61B700018D2A /* CandidatePhoto.swift */; };
 		32D4C5EA1E9E161300B85B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4C5E91E9E161300B85B61 /* AppDelegate.swift */; };
 		32D4C5EC1E9E161300B85B61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D4C5EB1E9E161300B85B61 /* ViewController.swift */; };
 		32D4C5EF1E9E161300B85B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D4C5ED1E9E161300B85B61 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewPortfolio.storyboard; sourceTree = "<group>"; };
 		3259D7211E9E533700018D2A /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3259D7221E9E533700018D2A /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		3259D7271E9E61B700018D2A /* CandidatePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidatePhoto.swift; sourceTree = "<group>"; };
 		32D4C5E61E9E161300B85B61 /* Tumbfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumbfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D4C5E91E9E161300B85B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32D4C5EB1E9E161300B85B61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,15 @@
 			name = "Photo Cell";
 			sourceTree = "<group>";
 		};
+		3259D7261E9E61A500018D2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3259D7271E9E61B700018D2A /* CandidatePhoto.swift */,
+				32D4C6191E9E17D600B85B61 /* Request */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		32D4C5DD1E9E161300B85B61 = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				32D4C6201E9E207500B85B61 /* View */,
-				32D4C6191E9E17D600B85B61 /* Request */,
+				3259D7261E9E61A500018D2A /* Model */,
 				32D4C5E91E9E161300B85B61 /* AppDelegate.swift */,
 				32D4C5F01E9E161300B85B61 /* Assets.xcassets */,
 				32D4C5F51E9E161300B85B61 /* Info.plist */,
@@ -550,6 +561,7 @@
 				3259D71B1E9E4F9100018D2A /* SelectPhotosViewController.swift in Sources */,
 				32D4C6181E9E178F00B85B61 /* TumblrRequestType.swift in Sources */,
 				3259D7231E9E533700018D2A /* PhotoCell.swift in Sources */,
+				3259D7281E9E61B700018D2A /* CandidatePhoto.swift in Sources */,
 				32D4C61D1E9E1CC400B85B61 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -60,5 +60,4 @@ struct Photo: Decodable {
             width: e <| ["original_size", "width"],
             height: e <| ["original_size", "height"])
     }
-    
 }

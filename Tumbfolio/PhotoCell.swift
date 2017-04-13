@@ -23,7 +23,7 @@ class PhotoCell: UICollectionViewCell {
     func fillWith(candidatePost: CandidatePost) {
         photoImageView.sd_setImage(with: candidatePost.post.firstPhotoURL())
         if (candidatePost.selected) {
-            checkView.backgroundColor = UIColor.white
+            checkView.backgroundColor = UIColor.blue
         } else {
             checkView.backgroundColor = UIColor.clear
         }
@@ -34,7 +34,7 @@ class PhotoCell: UICollectionViewCell {
             checkView.backgroundColor = UIColor.clear
             candidatePost.changeSelect()
         } else {
-            checkView.backgroundColor = UIColor.white
+            checkView.backgroundColor = UIColor.blue
             candidatePost.changeSelect()
         }
     }
@@ -42,6 +42,7 @@ class PhotoCell: UICollectionViewCell {
     private func designCheckView() {
         self.checkView.layer.cornerRadius = self.checkView.frame.width / 2
         self.checkView.layer.masksToBounds = true
+        self.checkView.layer.borderColor = UIColor.white.cgColor
+        self.checkView.layer.borderWidth = 2
     }
-    
 }

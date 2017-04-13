@@ -23,7 +23,7 @@
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fj8-mc-BY0">
-                        <rect key="frame" x="153" y="15" width="30" height="30"/>
+                        <rect key="frame" x="158" y="10" width="30" height="30"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="3N6-aA-wyX"/>
@@ -34,9 +34,9 @@
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="m1h-lq-hwf" secondAttribute="trailing" id="EDl-dL-kr4"/>
-                <constraint firstAttribute="trailing" secondItem="fj8-mc-BY0" secondAttribute="trailing" constant="15" id="H6z-2V-7yN"/>
+                <constraint firstAttribute="trailing" secondItem="fj8-mc-BY0" secondAttribute="trailing" constant="10" id="H6z-2V-7yN"/>
                 <constraint firstItem="m1h-lq-hwf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JaC-Vf-3v3"/>
-                <constraint firstItem="fj8-mc-BY0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="PMf-Wp-h5i"/>
+                <constraint firstItem="fj8-mc-BY0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="PMf-Wp-h5i"/>
                 <constraint firstItem="m1h-lq-hwf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ulj-AT-ghf"/>
                 <constraint firstAttribute="bottom" secondItem="m1h-lq-hwf" secondAttribute="bottom" id="X8l-DM-QCj"/>
             </constraints>

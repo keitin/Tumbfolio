@@ -26,17 +26,7 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
         super.viewDidLoad()
 
         posts = CandidatePost.trans(posts: currentUser.posts)
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 1.0
-        layout.minimumLineSpacing = 1.0
-        
-        self.collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        self.collectionView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height - (self.navigationController?.navigationBar.frame.height)!)
-        self.collectionView.backgroundColor = UIColor.white
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
-        self.view.addSubview(self.collectionView)
+        setupCollectionView()
         
         // MARK: Register cell to collection view
         self.collectionView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
@@ -84,6 +74,19 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellSize = self.view.frame.size.width/3 - 1
         return CGSize(width: cellSize, height: cellSize)
+    }
+    
+    private func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 1.0
+        layout.minimumLineSpacing = 1.0
+        
+        self.collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        self.collectionView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height - (self.navigationController?.navigationBar.frame.height)!)
+        self.collectionView.backgroundColor = UIColor.white
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.view.addSubview(self.collectionView)
     }
     
     override func didReceiveMemoryWarning() {

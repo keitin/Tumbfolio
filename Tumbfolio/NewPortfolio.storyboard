@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Portfolio-->
+        <!--Select Photos-->
         <scene sceneID="IkX-6g-dIt">
             <objects>
                 <viewController id="f3z-WD-52c" customClass="SelectPhotosViewController" customModule="Tumbfolio" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Portfolio" id="tWe-eM-m9Z"/>
+                    <navigationItem key="navigationItem" title="Select Photos" id="tWe-eM-m9Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5G-yi-56S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

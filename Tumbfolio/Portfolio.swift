@@ -20,11 +20,16 @@ final class CurrentPortfolio {
 final class Portfolio {
     
     var products: [Product] = []
+    var numberOfProducts: Int {
+        return products.count
+    }
     
     init() {}
     
     init(editors: [PhotoInfoEditor]) {
         for editor in editors {
+            print(editor.title)
+            print(editor.summary)
             let product = Product(
                 title: editor.title,
                 summary: editor.summary,
@@ -32,6 +37,8 @@ final class Portfolio {
             products.append(product)
         }
     }
+    
+    
 }
 
 final class Product {
@@ -44,6 +51,10 @@ final class Product {
         self.title = title
         self.summary = summary
         self.imageURL = imageURL
+    }
+    
+    func getImageURL() -> URL {
+        return URL(string: imageURL)!
     }
     
 }

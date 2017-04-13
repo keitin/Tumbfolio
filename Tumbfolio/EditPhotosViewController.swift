@@ -61,7 +61,6 @@ class EditPhotosViewController: UIViewController {
         for index in 0...selectedPosts.numberOfPosts - 1 {
             let editor = editors[index]
             editor.draw(rect: scrollView.frame, position: index)
-            editors.append(editor)
         }
     }
 

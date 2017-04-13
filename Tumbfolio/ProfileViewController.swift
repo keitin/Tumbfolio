@@ -9,7 +9,12 @@
 import UIKit
 
 final class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    private enum CellType: Int {
+        case profile = 0
+        case open
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     let currentUser = CurrentUser.sharedInstance.user!
     
@@ -20,6 +25,7 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
         self.tableView.delegate = self
         
         self.tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
+        self.tableView.register(UINib(nibName: "ShowPortfolioCell", bundle: nil), forCellReuseIdentifier: "ShowPortfolioCell")
     
     }
     
@@ -44,19 +50,47 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     // MARK: UITableView DataSouce
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-        cell.fillWith(user: currentUser)
-        return cell
+        
+        switch CellType.init(rawValue: indexPath.section)! {
+        case .profile:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
+            cell.fillWith(user: currentUser)
+            return cell
+        case .open:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ShowPortfolioCell", for: indexPath) as! ShowPortfolioCell
+            return cell
+        }
     }
     
     // MARK: UITableView Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let _ = CurrentPortfolio.sharedInstance.portfolio else {
+            return
+        }
+        
+        if (indexPath.section == 1) {
+            let portfolioViewController = PortfolioViewController.makeInstance()
+            present(portfolioViewController, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 265
+        switch CellType.init(rawValue: indexPath.section)! {
+        case .profile:
+            return 256
+        case .open:
+            return 44
+        }
     }
     
     override func didReceiveMemoryWarning() {

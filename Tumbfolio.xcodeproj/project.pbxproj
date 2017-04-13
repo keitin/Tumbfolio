@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		321C39E11E9F110A002A67D0 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C39E01E9F110A002A67D0 /* Portfolio.swift */; };
+		321C3A1E1E9F2869002A67D0 /* ShowPortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A1C1E9F2869002A67D0 /* ShowPortfolioCell.swift */; };
+		321C3A1F1E9F2869002A67D0 /* ShowPortfolioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321C3A1D1E9F2869002A67D0 /* ShowPortfolioCell.xib */; };
+		321C3A221E9F2BDA002A67D0 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A211E9F2BDA002A67D0 /* PortfolioViewController.swift */; };
+		321C3A251E9F2C07002A67D0 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A241E9F2C07002A67D0 /* PortfolioView.swift */; };
+		321C3A271E9F2C10002A67D0 /* PortfolioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321C3A261E9F2C10002A67D0 /* PortfolioView.xib */; };
+		321C3A291E9F301D002A67D0 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321C3A281E9F301D002A67D0 /* Portfolio.storyboard */; };
 		3259D71B1E9E4F9100018D2A /* SelectPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D71A1E9E4F9100018D2A /* SelectPhotosViewController.swift */; };
 		3259D71E1E9E4FD800018D2A /* NewPortfolioNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D71D1E9E4FD800018D2A /* NewPortfolioNavigationController.swift */; };
 		3259D7201E9E4FF200018D2A /* NewPortfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */; };
@@ -65,6 +71,12 @@
 		1F9132CFC0241F7C9A77AC36 /* Pods-Tumbfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumbfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumbfolio/Pods-Tumbfolio.release.xcconfig"; sourceTree = "<group>"; };
 		2D61DC450AB2AFBC0E350579 /* Pods_TumbfolioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumbfolioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		321C39E01E9F110A002A67D0 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		321C3A1C1E9F2869002A67D0 /* ShowPortfolioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPortfolioCell.swift; sourceTree = "<group>"; };
+		321C3A1D1E9F2869002A67D0 /* ShowPortfolioCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPortfolioCell.xib; sourceTree = "<group>"; };
+		321C3A211E9F2BDA002A67D0 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		321C3A241E9F2C07002A67D0 /* PortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		321C3A261E9F2C10002A67D0 /* PortfolioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioView.xib; sourceTree = "<group>"; };
+		321C3A281E9F301D002A67D0 /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
 		3259D71A1E9E4F9100018D2A /* SelectPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotosViewController.swift; sourceTree = "<group>"; };
 		3259D71D1E9E4FD800018D2A /* NewPortfolioNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPortfolioNavigationController.swift; sourceTree = "<group>"; };
 		3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewPortfolio.storyboard; sourceTree = "<group>"; };
@@ -146,6 +158,34 @@
 				4EC5706D82E62EB4AB31CFB2 /* Pods-TumbfolioUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		321C3A201E9F286E002A67D0 /* Show Portfolio Cell */ = {
+			isa = PBXGroup;
+			children = (
+				321C3A1C1E9F2869002A67D0 /* ShowPortfolioCell.swift */,
+				321C3A1D1E9F2869002A67D0 /* ShowPortfolioCell.xib */,
+			);
+			name = "Show Portfolio Cell";
+			sourceTree = "<group>";
+		};
+		321C3A231E9F2BE0002A67D0 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				321C3A211E9F2BDA002A67D0 /* PortfolioViewController.swift */,
+				321C3A281E9F301D002A67D0 /* Portfolio.storyboard */,
+				321C3A2A1E9F3041002A67D0 /* Portfolio View */,
+			);
+			name = Portfolio;
+			sourceTree = "<group>";
+		};
+		321C3A2A1E9F3041002A67D0 /* Portfolio View */ = {
+			isa = PBXGroup;
+			children = (
+				321C3A241E9F2C07002A67D0 /* PortfolioView.swift */,
+				321C3A261E9F2C10002A67D0 /* PortfolioView.xib */,
+			);
+			name = "Portfolio View";
 			sourceTree = "<group>";
 		};
 		3259D71C1E9E4F9400018D2A /* Select Photos */ = {
@@ -278,6 +318,7 @@
 			children = (
 				32D4C6231E9E20C400B85B61 /* SignIn */,
 				32D4C6261E9E22D700B85B61 /* Profile */,
+				321C3A231E9F2BE0002A67D0 /* Portfolio */,
 				3259D71C1E9E4F9400018D2A /* Select Photos */,
 				3259D72B1E9E66DA00018D2A /* Edit Photos */,
 			);
@@ -300,6 +341,7 @@
 				32D4C6241E9E22D300B85B61 /* ProfileViewController.swift */,
 				32D4C6271E9E22EB00B85B61 /* Profile.storyboard */,
 				3259D7371E9EF35C00018D2A /* Profile Cell */,
+				321C3A201E9F286E002A67D0 /* Show Portfolio Cell */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -436,12 +478,15 @@
 				3259D7201E9E4FF200018D2A /* NewPortfolio.storyboard in Resources */,
 				32D4C6221E9E20A000B85B61 /* SignIn.storyboard in Resources */,
 				3259D7321E9E720700018D2A /* PhotoInfoEditor.xib in Resources */,
+				321C3A271E9F2C10002A67D0 /* PortfolioView.xib in Resources */,
+				321C3A291E9F301D002A67D0 /* Portfolio.storyboard in Resources */,
 				32D4C5F41E9E161300B85B61 /* LaunchScreen.storyboard in Resources */,
 				32D4C6281E9E22EB00B85B61 /* Profile.storyboard in Resources */,
 				32D4C5F11E9E161300B85B61 /* Assets.xcassets in Resources */,
 				32D4C5EF1E9E161300B85B61 /* Main.storyboard in Resources */,
 				3259D7241E9E533700018D2A /* PhotoCell.xib in Resources */,
 				3259D72D1E9E670600018D2A /* EditPhotos.storyboard in Resources */,
+				321C3A1F1E9F2869002A67D0 /* ShowPortfolioCell.xib in Resources */,
 				3259D7361E9EF35200018D2A /* ProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32D4C5EC1E9E161300B85B61 /* ViewController.swift in Sources */,
+				321C3A221E9F2BDA002A67D0 /* PortfolioViewController.swift in Sources */,
 				32D4C61B1E9E180C00B85B61 /* GetPostsWithUser.swift in Sources */,
 				32D4C61F1E9E207200B85B61 /* SignInViewController.swift in Sources */,
 				32D4C62A1E9E234600B85B61 /* ProfileNavigationController.swift in Sources */,
@@ -617,8 +663,10 @@
 				3259D7351E9EF35200018D2A /* ProfileCell.swift in Sources */,
 				32D4C6181E9E178F00B85B61 /* TumblrRequestType.swift in Sources */,
 				3259D73B1E9F038500018D2A /* SelectedPosts.swift in Sources */,
+				321C3A1E1E9F2869002A67D0 /* ShowPortfolioCell.swift in Sources */,
 				321C39E11E9F110A002A67D0 /* Portfolio.swift in Sources */,
 				3259D72A1E9E66D000018D2A /* EditPhotosViewController.swift in Sources */,
+				321C3A251E9F2C07002A67D0 /* PortfolioView.swift in Sources */,
 				3259D7231E9E533700018D2A /* PhotoCell.swift in Sources */,
 				3259D7281E9E61B700018D2A /* CandidatePost.swift in Sources */,
 				3259D7391E9EFE9400018D2A /* CurrentUser.swift in Sources */,

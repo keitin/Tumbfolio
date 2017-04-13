@@ -20,9 +20,27 @@
                     <view key="view" contentMode="scaleToFill" id="t18-Wg-7fd">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o1E-Tr-SJJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="NdK-fT-Jxw"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o1E-Tr-SJJ" firstAttribute="leading" secondItem="t18-Wg-7fd" secondAttribute="leading" id="BkZ-fF-C0G"/>
+                            <constraint firstAttribute="trailing" secondItem="o1E-Tr-SJJ" secondAttribute="trailing" id="JTj-Nb-YVk"/>
+                            <constraint firstItem="dPJ-wy-1Qa" firstAttribute="top" secondItem="o1E-Tr-SJJ" secondAttribute="bottom" id="POt-xS-BYO"/>
+                            <constraint firstItem="o1E-Tr-SJJ" firstAttribute="top" secondItem="LFg-k8-PgS" secondAttribute="bottom" id="dcn-KT-ZB0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="9of-OW-Znd"/>
+                    <connections>
+                        <outlet property="tableView" destination="o1E-Tr-SJJ" id="m5e-JS-QJa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pau-Bx-Yi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

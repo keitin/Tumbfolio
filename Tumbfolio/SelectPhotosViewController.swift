@@ -17,6 +17,7 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
         super.viewWillAppear(animated)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "✕", style: .plain, target: self, action: #selector(SelectPhotosViewController.tapCloseButton(sender:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEXT", style: .plain, target: self, action: #selector(SelectPhotosViewController.tapNextButton(sender:)))
     }
     
     override func viewDidLoad() {
@@ -26,7 +27,6 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
             let photo = CandidatePhoto(selected: false)
             photos.append(photo)
         }
-        
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 1.0
@@ -46,6 +46,11 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
     // MARK: Navigation Item Actions
     func tapCloseButton(sender: UIBarButtonItem) {
         dismiss(animated: true)
+    }
+    
+    func tapNextButton(sender: UIBarButtonItem) {
+        let editPhotosViewController = EditPhotosViewController.makeInstance()
+        self.navigationController?.pushViewController(editPhotosViewController, animated: true)
     }
     
     // MARK: Collection View Data Source

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 final class SignInViewController: UIViewController {
 
@@ -20,6 +21,18 @@ final class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*
+        let request = GetPostsWithUser(userDomain: "kinopontas")
+        Session.send(request) { result in
+            switch result {
+            case .success(let user):
+                print(user)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        */
         
     }
 

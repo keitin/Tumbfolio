@@ -12,7 +12,7 @@ import Himotoki
 
 struct GetPostsWithUser: TumblrRequestType {
     
-    typealias Response = [Post]
+    typealias Response = User
 
     let userDomain: String
     
@@ -30,10 +30,28 @@ struct GetPostsWithUser: TumblrRequestType {
         ]
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [Post] {
-        return try decodeArray(object, rootKeyPath: ["response", "posts"])
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> User {
+        return try decodeValue(object, rootKeyPath: "response")
     }
     
+}
+
+struct User: Decodable {
+    
+    var name: String
+    var title: String
+    var description: String
+    var posts: [Post]
+    
+    static func decode(_ e: Extractor) throws -> User {
+        return try User(
+            name: e <| ["blog", "name"],
+            title: e <| ["blog", "title"],
+            description: e <| ["blog", "description"],
+            posts: e <|| ["posts"])
+    }
+    
+    //https://api.tumblr.com/v2/blog/kinopontas/avatar/128
 }
 
 struct Post: Decodable {

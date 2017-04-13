@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="265" id="KGk-i7-Jjw" customClass="ProfileCell" customModule="Tumbfolio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="263.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portfolio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFI-uj-5nt">
+                        <rect key="frame" x="8" y="28" width="304" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="oSQ-La-D8z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="32"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kinopontas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2H-E8-FY6">
+                        <rect key="frame" x="8" y="180" width="304" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="GfR-cM-bRw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This blog is my portfolio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-jL-DHB">
+                        <rect key="frame" x="8" y="215" width="304" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Csf-WP-avF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f7s-x9-tBW">
+                        <rect key="frame" x="123" y="102" width="74" height="72"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="72" id="N8m-Ir-CM0"/>
+                            <constraint firstAttribute="width" constant="74" id="bvL-uI-IbI"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oFI-uj-5nt" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="0BD-oH-unw"/>
+                    <constraint firstItem="g2H-E8-FY6" firstAttribute="top" secondItem="f7s-x9-tBW" secondAttribute="bottom" constant="6" id="E0q-Xp-aZ6"/>
+                    <constraint firstItem="g2H-E8-FY6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Gko-Rd-tPh"/>
+                    <constraint firstItem="6dN-jL-DHB" firstAttribute="top" secondItem="g2H-E8-FY6" secondAttribute="bottom" constant="2" id="Jyu-Ey-3zL"/>
+                    <constraint firstItem="f7s-x9-tBW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="O4x-Cp-CTe"/>
+                    <constraint firstItem="6dN-jL-DHB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="PKZ-e1-pUr"/>
+                    <constraint firstItem="f7s-x9-tBW" firstAttribute="top" secondItem="oFI-uj-5nt" secondAttribute="bottom" constant="29" id="S17-pc-T2f"/>
+                    <constraint firstItem="oFI-uj-5nt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="lVG-3y-VyO"/>
+                    <constraint firstItem="oFI-uj-5nt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="sRc-m2-HZU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6dN-jL-DHB" secondAttribute="trailing" id="szh-VF-hLy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="g2H-E8-FY6" secondAttribute="trailing" id="yBi-be-pP2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="34" y="-19"/>
+        </tableViewCell>
+    </objects>
+</document>

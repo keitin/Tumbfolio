@@ -24,7 +24,22 @@ class EditPhotosViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Edit Photos"
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .plain, target: self, action: #selector(EditPhotosViewController.tapCreateButton(sender:)))
+        
+        fillValuesIntoEditor()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         designScrollView()
+    }
+    
+    func tapCreateButton(sender: UIBarButtonItem) {
+        let portfolio = Portfolio(editors: editors)
+        CurrentPortfolio.sharedInstance.portfolio = portfolio
+        dismiss(animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,13 +47,20 @@ class EditPhotosViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func fillValuesIntoEditor() {
+        for index in 0...selectedPosts.numberOfPosts - 1 {
+            let editor = PhotoInfoEditor.makeInstance()
+            editor.fillWith(post: selectedPosts.posts[index])
+            scrollView.addSubview(editor)
+            editors.append(editor)
+        }
+    }
+    
     private func designScrollView() {
         self.scrollView.contentSize = CGSize(width: scrollView.frame.width * CGFloat(selectedPosts.numberOfPosts), height: scrollView.frame.height - navigationController!.navigationBar.frame.height)
         for index in 0...selectedPosts.numberOfPosts - 1 {
-            let editor = PhotoInfoEditor.makeInstance()
+            let editor = editors[index]
             editor.draw(rect: scrollView.frame, position: index)
-            editor.fillWith(post: selectedPosts.posts[index])
-            scrollView.addSubview(editor)
             editors.append(editor)
         }
     }

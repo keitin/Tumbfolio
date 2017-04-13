@@ -16,6 +16,15 @@ class PhotoInfoEditor: UIView {
     @IBOutlet weak var photoImageView: UIImageView!
 
     var id: Int!
+    var title: String {
+        return titleTextField.text!
+    }
+    
+    var summary: String {
+        return summaryTextView.text
+    }
+    
+    var imageURL: String!
     
     static func makeInstance() -> PhotoInfoEditor {
         let xib = UINib(nibName: "PhotoInfoEditor", bundle: nil)
@@ -32,6 +41,7 @@ class PhotoInfoEditor: UIView {
     
     func fillWith(post: Post) {
         self.summaryTextView.text = post.summary
+        self.imageURL = post.photos.first?.imageURL
         self.photoImageView.sd_setImage(with: post.firstPhotoURL())
     }
 

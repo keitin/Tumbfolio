@@ -13,13 +13,6 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var tableView: UITableView!
     let currentUser = CurrentUser.sharedInstance.user!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // MARK: Add Naviagation Items
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEW", style: .plain, target: self, action: #selector(ProfileViewController.tapNewButton(sender:)))
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +20,19 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
         self.tableView.delegate = self
         
         self.tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+     
+        if let portfolio = CurrentPortfolio.sharedInstance.portfolio {
+            print(portfolio.products)
+        }
+
+        
+        // MARK: Add Naviagation Items
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEW", style: .plain, target: self, action: #selector(ProfileViewController.tapNewButton(sender:)))
     }
     
     // MARK: Navigation Item Actions

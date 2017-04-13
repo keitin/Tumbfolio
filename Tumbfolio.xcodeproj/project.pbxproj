@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321C39E11E9F110A002A67D0 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C39E01E9F110A002A67D0 /* Portfolio.swift */; };
 		3259D71B1E9E4F9100018D2A /* SelectPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D71A1E9E4F9100018D2A /* SelectPhotosViewController.swift */; };
 		3259D71E1E9E4FD800018D2A /* NewPortfolioNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D71D1E9E4FD800018D2A /* NewPortfolioNavigationController.swift */; };
 		3259D7201E9E4FF200018D2A /* NewPortfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */; };
@@ -63,6 +64,7 @@
 		1F63F251E8F3FC22636724BF /* Pods-TumbfolioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumbfolioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TumbfolioTests/Pods-TumbfolioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F9132CFC0241F7C9A77AC36 /* Pods-Tumbfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumbfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumbfolio/Pods-Tumbfolio.release.xcconfig"; sourceTree = "<group>"; };
 		2D61DC450AB2AFBC0E350579 /* Pods_TumbfolioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumbfolioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		321C39E01E9F110A002A67D0 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		3259D71A1E9E4F9100018D2A /* SelectPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotosViewController.swift; sourceTree = "<group>"; };
 		3259D71D1E9E4FD800018D2A /* NewPortfolioNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPortfolioNavigationController.swift; sourceTree = "<group>"; };
 		3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewPortfolio.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				3259D7271E9E61B700018D2A /* CandidatePost.swift */,
 				3259D7381E9EFE9400018D2A /* CurrentUser.swift */,
 				3259D73A1E9F038500018D2A /* SelectedPosts.swift */,
+				321C39E01E9F110A002A67D0 /* Portfolio.swift */,
 				32D4C6191E9E17D600B85B61 /* Request */,
 			);
 			name = Model;
@@ -388,7 +391,7 @@
 				TargetAttributes = {
 					32D4C5E51E9E161300B85B61 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 8T5842463P;
+						DevelopmentTeam = W2SEEKJW55;
 						ProvisioningStyle = Automatic;
 					};
 					32D4C5F91E9E161300B85B61 = {
@@ -614,6 +617,7 @@
 				3259D7351E9EF35200018D2A /* ProfileCell.swift in Sources */,
 				32D4C6181E9E178F00B85B61 /* TumblrRequestType.swift in Sources */,
 				3259D73B1E9F038500018D2A /* SelectedPosts.swift in Sources */,
+				321C39E11E9F110A002A67D0 /* Portfolio.swift in Sources */,
 				3259D72A1E9E66D000018D2A /* EditPhotosViewController.swift in Sources */,
 				3259D7231E9E533700018D2A /* PhotoCell.swift in Sources */,
 				3259D7281E9E61B700018D2A /* CandidatePost.swift in Sources */,
@@ -716,7 +720,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -760,7 +764,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -773,8 +777,9 @@
 			baseConfigurationReference = 9074FEA93878E6A24E1C9E28 /* Pods-Tumbfolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8T5842463P;
+				DEVELOPMENT_TEAM = W2SEEKJW55;
 				INFOPLIST_FILE = Tumbfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.Tumbfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -787,8 +792,9 @@
 			baseConfigurationReference = 1F9132CFC0241F7C9A77AC36 /* Pods-Tumbfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8T5842463P;
+				DEVELOPMENT_TEAM = W2SEEKJW55;
 				INFOPLIST_FILE = Tumbfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.Tumbfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";

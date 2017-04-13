@@ -51,7 +51,10 @@ struct User: Decodable {
             posts: e <|| ["posts"])
     }
     
-    //https://api.tumblr.com/v2/blog/kinopontas/avatar/128
+    func avatarURL() -> URL {
+        return URL(string: "https://api.tumblr.com/v2/blog/\(name)/avatar/128")!
+    }
+    
 }
 
 struct Post: Decodable {

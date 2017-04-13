@@ -69,6 +69,12 @@
                     <constraint firstAttribute="trailingMargin" secondItem="g2H-E8-FY6" secondAttribute="trailing" id="yBi-be-pP2"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="f7s-x9-tBW" id="49q-3j-5eP"/>
+                <outlet property="descriptionLabel" destination="6dN-jL-DHB" id="MrA-qt-IOt"/>
+                <outlet property="nameLabel" destination="g2H-E8-FY6" id="pzg-VM-tzA"/>
+                <outlet property="titleLabel" destination="oFI-uj-5nt" id="KsI-WO-G6N"/>
+            </connections>
             <point key="canvasLocation" x="34" y="-19"/>
         </tableViewCell>
     </objects>

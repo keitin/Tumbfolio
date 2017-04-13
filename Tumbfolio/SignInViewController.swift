@@ -22,25 +22,25 @@ final class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        let request = GetPostsWithUser(userDomain: "kinopontas")
-        Session.send(request) { result in
-            switch result {
-            case .success(let user):
-                print(user)
-            case .failure(let error):
-                print(error)
-            }
-        }
-        */
-        
     }
 
     @IBAction func tapStartButton(_ sender: UIButton) {
         
-        let profileNC = ProfileNavigationController.makeInstance()
-        UIApplication.shared.keyWindow?.rootViewController = profileNC
-        
+        let request = GetPostsWithUser(userDomain: "kinopontas")
+        Session.send(request) { result in
+            switch result {
+            case .success(let user):
+                
+                let current = CurrentUser.sharedInstance
+                current.user = user
+                
+                let profileNC = ProfileNavigationController.makeInstance()
+                UIApplication.shared.keyWindow?.rootViewController = profileNC
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     

@@ -11,7 +11,9 @@ import UIKit
 final class SelectPhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     var collectionView: UICollectionView!
-    var photos: [CandidatePhoto] = []
+    var posts: [CandidatePost] = []
+    let currentUser = CurrentUser.sharedInstance.user!
+    var selectedPhotosCount = 0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,10 +25,7 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        for _ in 1...30 {
-            let photo = CandidatePhoto(selected: false)
-            photos.append(photo)
-        }
+        posts = CandidatePost.trans(posts: currentUser.posts)
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 1.0
@@ -49,26 +48,36 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
     }
     
     func tapNextButton(sender: UIBarButtonItem) {
+        guard selectedPhotosCount > 0 else {
+            print("Select photos")
+            return
+        }
         let editPhotosViewController = EditPhotosViewController.makeInstance()
+        editPhotosViewController.selectedPosts = SelectedPosts(candidatePosts: posts)
         self.navigationController?.pushViewController(editPhotosViewController, animated: true)
     }
     
     // MARK: Collection View Data Source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-        cell.fillWith(photo: photos[indexPath.row])
+        cell.fillWith(candidatePost: posts[indexPath.row])
         return cell
     }
     
     // MARK: Collection View Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! PhotoCell
-        let photo = photos[indexPath.row]
-        cell.tapCell(photo: photo)
+        let post = posts[indexPath.row]
+        if (post.selected) {
+            selectedPhotosCount = selectedPhotosCount - 1
+        } else {
+            selectedPhotosCount = selectedPhotosCount + 1
+        }
+        cell.tapCell(candidatePost: post)
     }
     
     // MARK: Collection View Delegate Flow Layout

@@ -11,8 +11,8 @@ import UIKit
 class EditPhotosViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    let count: CGFloat = 3
-    var editos: [PhotoInfoEditor] = []
+    var editors: [PhotoInfoEditor] = []
+    var selectedPosts: SelectedPosts!
     
     static func makeInstance() -> EditPhotosViewController {
         let storyboard = UIStoryboard(name: "EditPhotos", bundle: nil)
@@ -22,9 +22,8 @@ class EditPhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Edit Photos"
         
+        title = "Edit Photos"
         designScrollView()
     }
 
@@ -34,15 +33,13 @@ class EditPhotosViewController: UIViewController {
     }
     
     private func designScrollView() {
-        self.scrollView.contentSize = CGSize(width: scrollView.frame.width * count, height: scrollView.frame.height - navigationController!.navigationBar.frame.height)
-        for i in 0...Int(count - 1) {
+        self.scrollView.contentSize = CGSize(width: scrollView.frame.width * CGFloat(selectedPosts.numberOfPosts), height: scrollView.frame.height - navigationController!.navigationBar.frame.height)
+        for index in 0...selectedPosts.numberOfPosts - 1 {
             let editor = PhotoInfoEditor.makeInstance()
-            editor.frame.size = CGSize(width: scrollView.frame.width, height: scrollView.frame.height)
-            editor.frame.origin.x = CGFloat(i) * scrollView.frame.width
-            editor.frame.origin.y = 0
-            editor.id = i
+            editor.draw(rect: scrollView.frame, position: index)
+            editor.fillWith(post: selectedPosts.posts[index])
             scrollView.addSubview(editor)
-            editos.append(editor)
+            editors.append(editor)
         }
     }
 

@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoInfoEditor: UIView {
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var summaryTextView: UITextView!
+    @IBOutlet weak var photoImageView: UIImageView!
 
     var id: Int!
     
@@ -18,12 +23,16 @@ class PhotoInfoEditor: UIView {
         return view
     }
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    func draw(rect: CGRect, position: Int) {
+        self.frame.size = CGSize(width: rect.width, height: rect.height)
+        self.frame.origin.x = CGFloat(position) * rect.width
+        self.frame.origin.y = 0
+        self.id = position
     }
-    */
+    
+    func fillWith(post: Post) {
+        self.summaryTextView.text = post.summary
+        self.photoImageView.sd_setImage(with: post.firstPhotoURL())
+    }
 
 }

@@ -33,7 +33,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8K7-YF-S14">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8K7-YF-S14">
                     <rect key="frame" x="16" y="223" width="343" height="196"/>
                     <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -53,6 +53,11 @@
                 <constraint firstItem="rlr-Az-4kz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="yar-uI-Bmh"/>
                 <constraint firstAttribute="trailing" secondItem="rlr-Az-4kz" secondAttribute="trailing" constant="16" id="yk6-ZI-yfe"/>
             </constraints>
+            <connections>
+                <outlet property="photoImageView" destination="8K7-YF-S14" id="q1F-Ff-aZM"/>
+                <outlet property="summaryTextView" destination="rlr-Az-4kz" id="ryq-sr-aBw"/>
+                <outlet property="titleTextField" destination="3iP-8y-5uy" id="hUp-mS-PmM"/>
+            </connections>
             <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>

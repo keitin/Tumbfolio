@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoCell: UICollectionViewCell {
     
@@ -19,21 +20,22 @@ class PhotoCell: UICollectionViewCell {
         checkView.backgroundColor = UIColor.clear
     }
     
-    func fillWith(photo: CandidatePhoto) {
-        if (photo.selected) {
+    func fillWith(candidatePost: CandidatePost) {
+        photoImageView.sd_setImage(with: candidatePost.post.firstPhotoURL())
+        if (candidatePost.selected) {
             checkView.backgroundColor = UIColor.white
         } else {
             checkView.backgroundColor = UIColor.clear
         }
     }
     
-    func tapCell(photo: CandidatePhoto) {
-        if (photo.selected) {
+    func tapCell(candidatePost: CandidatePost) {
+        if (candidatePost.selected) {
             checkView.backgroundColor = UIColor.clear
-            photo.changeSelect()
+            candidatePost.changeSelect()
         } else {
             checkView.backgroundColor = UIColor.white
-            photo.changeSelect()
+            candidatePost.changeSelect()
         }
     }
 

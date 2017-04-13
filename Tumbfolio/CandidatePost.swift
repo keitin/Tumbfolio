@@ -8,23 +8,23 @@
 
 import Foundation
 
-class CandidatePhoto {
+final class CandidatePost {
     
-//    var photo: Photo
+    var post: Post
     var selected: Bool
-
-    init(photo: Photo) {
-//        self.photo = photo
+    
+    static func trans(posts: [Post]) -> [CandidatePost] {
+        var array: [CandidatePost] = []
+        for post in posts {
+            let candidatePost = CandidatePost(post: post)
+            array.append(candidatePost)
+        }
+        return array
+    }
+    
+    init(post: Post) {
+        self.post = post
         self.selected = false
-    }
-    
-    init(photo: Photo, selected: Bool) {
-//        self.photo = photo
-        self.selected = selected
-    }
-    
-    init(selected: Bool) {
-        self.selected = selected
     }
     
     func changeSelect() {

@@ -67,6 +67,10 @@ struct Post: Decodable {
             summary: e <| ["summary"],
             photos: e <|| ["photos"])
     }
+ 
+    func firstPhotoURL() -> URL {
+        return URL(string: photos.first!.imageURL)!
+    }
 }
 
 struct Photo: Decodable {

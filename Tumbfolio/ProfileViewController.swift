@@ -31,12 +31,6 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
-        if let portfolio = CurrentPortfolio.sharedInstance.portfolio {
-            print(portfolio.products)
-        }
-
-        
         // MARK: Add Naviagation Items
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEW", style: .plain, target: self, action: #selector(ProfileViewController.tapNewButton(sender:)))
     }

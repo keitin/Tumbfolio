@@ -28,8 +28,6 @@ final class Portfolio {
     
     init(editors: [PhotoInfoEditor]) {
         for editor in editors {
-            print(editor.title)
-            print(editor.summary)
             let product = Product(
                 title: editor.title,
                 summary: editor.summary,

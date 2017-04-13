@@ -43,6 +43,8 @@ class PhotoInfoEditor: UIView {
         self.summaryTextView.text = post.summary
         self.imageURL = post.photos.first?.imageURL
         self.photoImageView.sd_setImage(with: post.firstPhotoURL())
+        self.layer.borderWidth = 5
+        self.layer.borderColor = UIColor.white.cgColor
     }
 
 }

@@ -82,6 +82,7 @@ Enter your user name of Tumblr</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startButton" destination="qDC-jj-jdP" id="04P-rb-3iE"/>
                         <outlet property="userNameTextField" destination="Hmq-P5-2k6" id="PDg-Lk-7Qj"/>
                     </connections>
                 </viewController>

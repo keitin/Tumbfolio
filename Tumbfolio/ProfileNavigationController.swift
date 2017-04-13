@@ -18,7 +18,8 @@ final class ProfileNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        UINavigationBar.appearance().tintColor = UIColor.darkGray
         // Do any additional setup after loading the view.
     }
 

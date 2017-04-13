@@ -18,7 +18,9 @@ class ProfileCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.layer.borderWidth = 5
+        self.layer.borderColor = UIColor(white: 0.9, alpha: 0.9).cgColor
+        self.designAvatar()
     }
     
     func fillWith(user: User) {
@@ -26,6 +28,11 @@ class ProfileCell: UITableViewCell {
         self.nameLabel.text = user.name
         self.descriptionLabel.text = user.description
         self.avatarImageView.sd_setImage(with: user.avatarURL())
+    }
+    
+    private func designAvatar() {
+        self.avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
+        self.avatarImageView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

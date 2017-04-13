@@ -10,15 +10,26 @@ import UIKit
 
 class ShowPortfolioCell: UITableViewCell {
 
+    @IBOutlet weak var outlineView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        designOutlineView()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func designOutlineView() {
+        outlineView.layer.cornerRadius = 10
+        outlineView.layer.borderColor = UIColor.white.cgColor
+        outlineView.layer.borderWidth = 5
+        outlineView.backgroundColor = UIColor.clear
+        outlineView.alpha = 0.8
     }
     
 }

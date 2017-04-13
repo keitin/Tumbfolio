@@ -70,7 +70,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
-            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="rlr-Az-4kz" firstAttribute="top" secondItem="LOC-88-2GR" secondAttribute="bottom" constant="3" id="8QD-Ro-LmT"/>
                 <constraint firstItem="3iP-8y-5uy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="9LY-JL-GQi"/>

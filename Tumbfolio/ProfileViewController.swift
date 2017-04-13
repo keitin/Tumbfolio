@@ -32,6 +32,7 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // MARK: Add Naviagation Items
+        tableView.reloadData()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "NEW", style: .plain, target: self, action: #selector(ProfileViewController.tapNewButton(sender:)))
     }
     
@@ -45,7 +46,11 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
     
     // MARK: UITableView DataSouce
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        if let _ = CurrentPortfolio.sharedInstance.portfolio {
+            return 2
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,12 +84,16 @@ final class ProfileViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch CellType.init(rawValue: indexPath.section)! {
-        case .profile:
-            return 256
-        case .open:
-            return 44
-        }
+        if let _ = CurrentPortfolio.sharedInstance.portfolio {
+            switch CellType.init(rawValue: indexPath.section)! {
+            case .profile:
+                return tableView.frame.height - 113
+            case .open:
+                return 113
+            }
+        } else {
+            return tableView.frame.height - 113
+        }   
     }
     
     override func didReceiveMemoryWarning() {

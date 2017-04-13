@@ -23,7 +23,7 @@ class PhotoCell: UICollectionViewCell {
     func fillWith(candidatePost: CandidatePost) {
         photoImageView.sd_setImage(with: candidatePost.post.firstPhotoURL())
         if (candidatePost.selected) {
-            checkView.backgroundColor = UIColor.blue
+            checkView.backgroundColor = UIColor.darkGray
         } else {
             checkView.backgroundColor = UIColor.clear
         }
@@ -34,7 +34,7 @@ class PhotoCell: UICollectionViewCell {
             checkView.backgroundColor = UIColor.clear
             candidatePost.changeSelect()
         } else {
-            checkView.backgroundColor = UIColor.blue
+            checkView.backgroundColor = UIColor.darkGray
             candidatePost.changeSelect()
         }
     }

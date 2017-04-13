@@ -12,7 +12,7 @@ import APIKit
 final class SignInViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
-    let closeButton = UIButton()
+    @IBOutlet weak var startButton: UIButton!
     
     static func makeInstance() -> SignInViewController {
         let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
@@ -23,8 +23,10 @@ final class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        designButton()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.tapScreen(sender:)))
         view.addGestureRecognizer(tapGesture)
+        
     }
     
     func tapScreen(sender: UITapGestureRecognizer) {
@@ -53,6 +55,10 @@ final class SignInViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func designButton() {
+        startButton.layer.cornerRadius = 3
     }
     
 }

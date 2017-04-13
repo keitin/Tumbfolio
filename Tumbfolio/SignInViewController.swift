@@ -22,6 +22,13 @@ final class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.tapScreen(sender:)))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    func tapScreen(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
 
     @IBAction func tapStartButton(_ sender: UIButton) {

@@ -12,6 +12,7 @@ import APIKit
 final class SignInViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
+    let closeButton = UIButton()
     
     static func makeInstance() -> SignInViewController {
         let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
@@ -21,7 +22,6 @@ final class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     @IBAction func tapStartButton(_ sender: UIButton) {
@@ -42,7 +42,6 @@ final class SignInViewController: UIViewController {
             }
         }
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

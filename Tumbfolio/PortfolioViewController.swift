@@ -13,6 +13,7 @@ class PortfolioViewController: UIViewController {
 
     let portfolio = CurrentPortfolio.sharedInstance.portfolio!
     var portfolioViews: [PortfolioView] = []
+    let closeButton = UIButton()
     
     static func makeInstance() -> PortfolioViewController {
         let storyboard = UIStoryboard(name: "Portfolio", bundle: nil)
@@ -23,6 +24,9 @@ class PortfolioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addSubviewsPortfolioViews()
+        makeCloseLabel()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PortfolioViewController.tapScreen(sender:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,14 +59,35 @@ class PortfolioViewController: UIViewController {
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tapCloseButton(sender: UIButton) {
+        dismiss(animated: true)
     }
-    */
+    
+    func tapScreen(sender: UITapGestureRecognizer) {
+        closeButton.isHidden = false
+        if (closeButton.isSelected) {
+            closeButton.frame.origin = CGPoint(x: 10, y: -40)
+            closeButton.isSelected = false
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.closeButton.frame.origin = CGPoint(x: 10, y: 10)
+            }
+            closeButton.isSelected = true
+        }
+        
+    }
+    
+    private func makeCloseLabel() {
+        closeButton.frame.size = CGSize(width: 100, height: 40)
+        closeButton.frame.origin = CGPoint(x: 10, y: -40)
+        closeButton.setTitle("close", for: .normal)
+        closeButton.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        closeButton.layer.cornerRadius = 5
+        closeButton.isSelected = false
+        closeButton.isHidden = true
+        closeButton.addTarget(self, action: #selector(PortfolioViewController.tapCloseButton(sender:)), for: .touchUpInside)
+        view.addSubview(closeButton)
+    }
 
 }

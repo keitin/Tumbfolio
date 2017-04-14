@@ -26,7 +26,6 @@ final class SignInViewController: UIViewController {
         designButton()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.tapScreen(sender:)))
         view.addGestureRecognizer(tapGesture)
-        
     }
     
     func tapScreen(sender: UITapGestureRecognizer) {
@@ -34,8 +33,8 @@ final class SignInViewController: UIViewController {
     }
 
     @IBAction func tapStartButton(_ sender: UIButton) {
-        
-        let request = GetPostsWithUser(userDomain: "kinopontas")
+        let username = userNameTextField.text!.characters.count > 0 ? userNameTextField.text! : "kinopontas"
+        let request = GetPostsWithUser(userDomain: username)
         Session.send(request) { result in
             switch result {
             case .success(let user):
@@ -47,9 +46,17 @@ final class SignInViewController: UIViewController {
                 UIApplication.shared.keyWindow?.rootViewController = profileNC
                 
             case .failure(let error):
-                print(error)
+                self.showError(error: error)
             }
         }
+    }
+    
+    private func showError(error: SessionTaskError) {
+        let message = error.message()
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

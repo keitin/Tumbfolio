@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowPortfolioCell: UITableViewCell {
+final class ShowPortfolioCell: UITableViewCell {
 
     @IBOutlet weak var outlineView: UIView!
     

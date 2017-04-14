@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PortfolioViewController: UIViewController {
+final class PortfolioViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
 
     let portfolio = CurrentPortfolio.sharedInstance.portfolio!
@@ -74,8 +74,7 @@ class PortfolioViewController: UIViewController {
                 self.closeButton.frame.origin = CGPoint(x: 10, y: 10)
             }
             closeButton.isSelected = true
-        }
-        
+        }   
     }
     
     private func makeCloseLabel() {

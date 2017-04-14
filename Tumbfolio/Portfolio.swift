@@ -36,7 +36,6 @@ final class Portfolio {
         }
     }
     
-    
 }
 
 final class Product {

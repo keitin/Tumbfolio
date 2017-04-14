@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class PhotoCell: UICollectionViewCell {
+final class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var checkView: UIView!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -23,7 +23,7 @@ class PhotoCell: UICollectionViewCell {
     func fillWith(candidatePost: CandidatePost) {
         photoImageView.sd_setImage(with: candidatePost.post.firstPhotoURL())
         if (candidatePost.selected) {
-            checkView.backgroundColor = UIColor.darkGray
+            checkView.backgroundColor = UIColor.yellow
         } else {
             checkView.backgroundColor = UIColor.clear
         }
@@ -34,7 +34,7 @@ class PhotoCell: UICollectionViewCell {
             checkView.backgroundColor = UIColor.clear
             candidatePost.changeSelect()
         } else {
-            checkView.backgroundColor = UIColor.darkGray
+            checkView.backgroundColor = UIColor.yellow
             candidatePost.changeSelect()
         }
     }

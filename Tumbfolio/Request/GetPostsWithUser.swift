@@ -28,61 +28,7 @@ struct GetPostsWithUser: TumblrRequestType {
         return [
             "api_key": API.KEY
         ]
-    }
-    
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> User {
-        return try decodeValue(object, rootKeyPath: "response")
-    }
-    
+    }    
 }
 
-struct User: Decodable {
-    
-    var name: String
-    var title: String
-    var description: String
-    var posts: [Post]
-    
-    static func decode(_ e: Extractor) throws -> User {
-        return try User(
-            name: e <| ["blog", "name"],
-            title: e <| ["blog", "title"],
-            description: e <| ["blog", "description"],
-            posts: e <|| ["posts"])
-    }
-    
-    func avatarURL() -> URL {
-        return URL(string: "https://api.tumblr.com/v2/blog/\(name)/avatar/128")!
-    }
-    
-}
 
-struct Post: Decodable {
-    
-    var summary: String
-    var photos: [Photo]
-    
-    static func decode(_ e: Extractor) throws -> Post {
-        return try Post(
-            summary: e <| ["summary"],
-            photos: e <|| ["photos"])
-    }
- 
-    func firstPhotoURL() -> URL {
-        return URL(string: photos.first!.imageURL)!
-    }
-}
-
-struct Photo: Decodable {
-    
-    var imageURL: String
-    var width: Int
-    var height: Int
-    
-    static func decode(_ e: Extractor) throws -> Photo {
-        return try Photo(
-            imageURL: e <| ["original_size", "url"],
-            width: e <| ["original_size", "width"],
-            height: e <| ["original_size", "height"])
-    }
-}

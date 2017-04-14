@@ -9,6 +9,8 @@
 // MARK: Actully we have to add this file into .gitignore file
 
 import Foundation
+
 struct API {
     static let KEY = "lELY96RwlVBfra3p7IDw3MKeIrDzxBPOY5Z8WR5H8kQKlZI9HJ"
 }
+

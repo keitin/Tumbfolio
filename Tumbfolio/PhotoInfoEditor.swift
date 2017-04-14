@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class PhotoInfoEditor: UIView {
+final class PhotoInfoEditor: UIView {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var summaryTextView: UITextView!

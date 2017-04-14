@@ -14,6 +14,11 @@
 		321C3A251E9F2C07002A67D0 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A241E9F2C07002A67D0 /* PortfolioView.swift */; };
 		321C3A271E9F2C10002A67D0 /* PortfolioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321C3A261E9F2C10002A67D0 /* PortfolioView.xib */; };
 		321C3A291E9F301D002A67D0 /* Portfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321C3A281E9F301D002A67D0 /* Portfolio.storyboard */; };
+		321C3A2D1E9FA4F6002A67D0 /* SessionTaskError+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A2C1E9FA4F6002A67D0 /* SessionTaskError+Extension.swift */; };
+		321C3A301E9FA556002A67D0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A2F1E9FA556002A67D0 /* User.swift */; };
+		321C3A331E9FA592002A67D0 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A321E9FA592002A67D0 /* Photo.swift */; };
+		321C3A351E9FA5BD002A67D0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C3A341E9FA5BD002A67D0 /* Post.swift */; };
+		321C3A381EA05D54002A67D0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 321C3A371EA05D54002A67D0 /* icon.png */; };
 		3259D71B1E9E4F9100018D2A /* SelectPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D71A1E9E4F9100018D2A /* SelectPhotosViewController.swift */; };
 		3259D71E1E9E4FD800018D2A /* NewPortfolioNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259D71D1E9E4FD800018D2A /* NewPortfolioNavigationController.swift */; };
 		3259D7201E9E4FF200018D2A /* NewPortfolio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */; };
@@ -75,6 +80,11 @@
 		321C3A241E9F2C07002A67D0 /* PortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		321C3A261E9F2C10002A67D0 /* PortfolioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioView.xib; sourceTree = "<group>"; };
 		321C3A281E9F301D002A67D0 /* Portfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Portfolio.storyboard; sourceTree = "<group>"; };
+		321C3A2C1E9FA4F6002A67D0 /* SessionTaskError+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SessionTaskError+Extension.swift"; sourceTree = "<group>"; };
+		321C3A2F1E9FA556002A67D0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		321C3A321E9FA592002A67D0 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		321C3A341E9FA5BD002A67D0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		321C3A371EA05D54002A67D0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		3259D71A1E9E4F9100018D2A /* SelectPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPhotosViewController.swift; sourceTree = "<group>"; };
 		3259D71D1E9E4FD800018D2A /* NewPortfolioNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPortfolioNavigationController.swift; sourceTree = "<group>"; };
 		3259D71F1E9E4FF200018D2A /* NewPortfolio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewPortfolio.storyboard; sourceTree = "<group>"; };
@@ -184,6 +194,43 @@
 			name = "Portfolio View";
 			sourceTree = "<group>";
 		};
+		321C3A2B1E9F9E1D002A67D0 /* Object Model */ = {
+			isa = PBXGroup;
+			children = (
+				3259D7381E9EFE9400018D2A /* CurrentUser.swift */,
+				3259D7271E9E61B700018D2A /* CandidatePost.swift */,
+				3259D73A1E9F038500018D2A /* SelectedPosts.swift */,
+				321C39E01E9F110A002A67D0 /* Portfolio.swift */,
+			);
+			name = "Object Model";
+			sourceTree = "<group>";
+		};
+		321C3A2E1E9FA4FD002A67D0 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				321C3A2C1E9FA4F6002A67D0 /* SessionTaskError+Extension.swift */,
+			);
+			name = Error;
+			sourceTree = "<group>";
+		};
+		321C3A361E9FA66A002A67D0 /* API Model */ = {
+			isa = PBXGroup;
+			children = (
+				321C3A2F1E9FA556002A67D0 /* User.swift */,
+				321C3A321E9FA592002A67D0 /* Photo.swift */,
+				321C3A341E9FA5BD002A67D0 /* Post.swift */,
+			);
+			name = "API Model";
+			sourceTree = "<group>";
+		};
+		321C3A391EA05D59002A67D0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				321C3A371EA05D54002A67D0 /* icon.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		3259D71C1E9E4F9400018D2A /* Select Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,11 +254,10 @@
 		3259D7261E9E61A500018D2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3259D7271E9E61B700018D2A /* CandidatePost.swift */,
-				3259D7381E9EFE9400018D2A /* CurrentUser.swift */,
-				3259D73A1E9F038500018D2A /* SelectedPosts.swift */,
-				321C39E01E9F110A002A67D0 /* Portfolio.swift */,
-				32D4C6191E9E17D600B85B61 /* Request */,
+				321C3A2B1E9F9E1D002A67D0 /* Object Model */,
+				321C3A361E9FA66A002A67D0 /* API Model */,
+				32D4C6191E9E17D600B85B61 /* API Request */,
+				321C3A2E1E9FA4FD002A67D0 /* Error */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -247,12 +293,12 @@
 		32D4C5DD1E9E161300B85B61 = {
 			isa = PBXGroup;
 			children = (
-				6D1CE178DAA60B899E353CFD /* Frameworks */,
-				199531D344D2CBB053E229AE /* Pods */,
-				32D4C5E71E9E161300B85B61 /* Products */,
 				32D4C5E81E9E161300B85B61 /* Tumbfolio */,
 				32D4C5FD1E9E161300B85B61 /* TumbfolioTests */,
 				32D4C6081E9E161300B85B61 /* TumbfolioUITests */,
+				32D4C5E71E9E161300B85B61 /* Products */,
+				6D1CE178DAA60B899E353CFD /* Frameworks */,
+				199531D344D2CBB053E229AE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,9 +315,10 @@
 		32D4C5E81E9E161300B85B61 /* Tumbfolio */ = {
 			isa = PBXGroup;
 			children = (
+				32D4C5E91E9E161300B85B61 /* AppDelegate.swift */,
 				32D4C6201E9E207500B85B61 /* View */,
 				3259D7261E9E61A500018D2A /* Model */,
-				32D4C5E91E9E161300B85B61 /* AppDelegate.swift */,
+				321C3A391EA05D59002A67D0 /* Image */,
 				32D4C5F01E9E161300B85B61 /* Assets.xcassets */,
 				32D4C5F51E9E161300B85B61 /* Info.plist */,
 				32D4C5F21E9E161300B85B61 /* LaunchScreen.storyboard */,
@@ -297,13 +344,14 @@
 			path = TumbfolioUITests;
 			sourceTree = "<group>";
 		};
-		32D4C6191E9E17D600B85B61 /* Request */ = {
+		32D4C6191E9E17D600B85B61 /* API Request */ = {
 			isa = PBXGroup;
 			children = (
 				32D4C61C1E9E1CC400B85B61 /* API.swift */,
-				32D4C61A1E9E180C00B85B61 /* GetPostsWithUser.swift */,
 				32D4C6171E9E178F00B85B61 /* TumblrRequestType.swift */,
+				32D4C61A1E9E180C00B85B61 /* GetPostsWithUser.swift */,
 			);
+			name = "API Request";
 			path = Request;
 			sourceTree = "<group>";
 		};
@@ -469,6 +517,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321C3A381EA05D54002A67D0 /* icon.png in Resources */,
 				3259D7201E9E4FF200018D2A /* NewPortfolio.storyboard in Resources */,
 				32D4C6221E9E20A000B85B61 /* SignIn.storyboard in Resources */,
 				3259D7321E9E720700018D2A /* PhotoInfoEditor.xib in Resources */,
@@ -646,17 +695,21 @@
 				321C3A221E9F2BDA002A67D0 /* PortfolioViewController.swift in Sources */,
 				32D4C61B1E9E180C00B85B61 /* GetPostsWithUser.swift in Sources */,
 				32D4C61F1E9E207200B85B61 /* SignInViewController.swift in Sources */,
+				321C3A351E9FA5BD002A67D0 /* Post.swift in Sources */,
 				32D4C62A1E9E234600B85B61 /* ProfileNavigationController.swift in Sources */,
 				32D4C5EA1E9E161300B85B61 /* AppDelegate.swift in Sources */,
+				321C3A2D1E9FA4F6002A67D0 /* SessionTaskError+Extension.swift in Sources */,
 				3259D72F1E9E71E800018D2A /* PhotoInfoEditor.swift in Sources */,
 				3259D71E1E9E4FD800018D2A /* NewPortfolioNavigationController.swift in Sources */,
 				32D4C6251E9E22D300B85B61 /* ProfileViewController.swift in Sources */,
 				3259D71B1E9E4F9100018D2A /* SelectPhotosViewController.swift in Sources */,
+				321C3A301E9FA556002A67D0 /* User.swift in Sources */,
 				3259D7351E9EF35200018D2A /* ProfileCell.swift in Sources */,
 				32D4C6181E9E178F00B85B61 /* TumblrRequestType.swift in Sources */,
 				3259D73B1E9F038500018D2A /* SelectedPosts.swift in Sources */,
 				321C3A1E1E9F2869002A67D0 /* ShowPortfolioCell.swift in Sources */,
 				321C39E11E9F110A002A67D0 /* Portfolio.swift in Sources */,
+				321C3A331E9FA592002A67D0 /* Photo.swift in Sources */,
 				3259D72A1E9E66D000018D2A /* EditPhotosViewController.swift in Sources */,
 				321C3A251E9F2C07002A67D0 /* PortfolioView.swift in Sources */,
 				3259D7231E9E533700018D2A /* PhotoCell.swift in Sources */,

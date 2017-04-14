@@ -46,9 +46,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This blog is my portfolio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-jL-DHB">
-                        <rect key="frame" x="8" y="275" width="304" height="20"/>
+                        <rect key="frame" x="8" y="275" width="304" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="gWm-Aa-wfC"/>
+                            <constraint firstAttribute="height" constant="50" id="gWm-Aa-wfC"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="13"/>
                         <nil key="textColor"/>

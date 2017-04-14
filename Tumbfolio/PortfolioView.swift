@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class PortfolioView: UIView {
+final class PortfolioView: UIView {
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

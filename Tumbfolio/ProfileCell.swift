@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class ProfileCell: UITableViewCell {
+final class ProfileCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!

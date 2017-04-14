@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditPhotosViewController: UIViewController, UIScrollViewDelegate {
+final class EditPhotosViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     var editors: [PhotoInfoEditor] = []

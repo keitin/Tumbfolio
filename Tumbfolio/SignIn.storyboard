@@ -64,10 +64,20 @@ Enter your user name of Tumblr</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※ 何も入力しなかった場合、松下のTubmlrのアカウントが適用されるのでお試しください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHu-1f-3ad">
+                                <rect key="frame" x="28" y="314" width="319" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="6JR-Ll-zZE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xjh-KN-jfu" firstAttribute="leading" secondItem="doc-Ve-2If" secondAttribute="leadingMargin" id="4h8-ny-TMe"/>
+                            <constraint firstItem="CHu-1f-3ad" firstAttribute="leading" secondItem="doc-Ve-2If" secondAttribute="leadingMargin" constant="12" id="7LB-cX-7Hh"/>
                             <constraint firstItem="Hmq-P5-2k6" firstAttribute="leading" secondItem="doc-Ve-2If" secondAttribute="leadingMargin" constant="12" id="C4X-kG-Un2"/>
                             <constraint firstItem="Xjh-KN-jfu" firstAttribute="top" secondItem="etc-Gt-fLu" secondAttribute="bottom" constant="8" id="Jir-zm-xXC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hmq-P5-2k6" secondAttribute="trailing" constant="12" id="Orj-ne-8ov"/>
@@ -75,10 +85,12 @@ Enter your user name of Tumblr</string>
                             <constraint firstItem="qDC-jj-jdP" firstAttribute="leading" secondItem="doc-Ve-2If" secondAttribute="leadingMargin" constant="12" id="RDU-dL-CWw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qDC-jj-jdP" secondAttribute="trailing" constant="12" id="Zis-eS-dRN"/>
                             <constraint firstItem="Xjh-KN-jfu" firstAttribute="trailing" secondItem="doc-Ve-2If" secondAttribute="trailingMargin" id="ab9-v2-WTD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CHu-1f-3ad" secondAttribute="trailing" constant="12" id="ha8-lr-t9H"/>
                             <constraint firstItem="Hmq-P5-2k6" firstAttribute="top" secondItem="Xjh-KN-jfu" secondAttribute="bottom" constant="17" id="jGr-gM-LVU"/>
                             <constraint firstItem="Jup-UF-XBn" firstAttribute="top" secondItem="qDC-jj-jdP" secondAttribute="bottom" constant="89" id="mNV-qz-gMi"/>
                             <constraint firstItem="etc-Gt-fLu" firstAttribute="leading" secondItem="doc-Ve-2If" secondAttribute="leading" id="pSN-td-UbZ"/>
                             <constraint firstAttribute="trailing" secondItem="etc-Gt-fLu" secondAttribute="trailing" id="rCw-P8-9UM"/>
+                            <constraint firstItem="CHu-1f-3ad" firstAttribute="top" secondItem="Hmq-P5-2k6" secondAttribute="bottom" constant="29" id="x81-2H-0fe"/>
                         </constraints>
                     </view>
                     <connections>

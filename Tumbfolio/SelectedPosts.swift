@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 final class SelectedPosts {
     
     var posts: [Post] = []
@@ -21,6 +22,4 @@ final class SelectedPosts {
             }
         }
     }
-    
-    
 }

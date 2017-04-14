@@ -39,7 +39,10 @@ final class SelectPhotosViewController: UIViewController, UICollectionViewDelega
     
     func tapNextButton(sender: UIBarButtonItem) {
         guard selectedPhotosCount > 0 else {
-            print("Select photos")
+            let alert = UIAlertController(title: "Error", message: "You need select at least one photo", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(ok)
+            present(alert, animated: true)
             return
         }
         let editPhotosViewController = EditPhotosViewController.makeInstance()
